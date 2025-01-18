@@ -1,0 +1,67 @@
+.sidebar {
+  height:100vh;
+  width: 230px;
+
+}
+
+.logo-section {
+  display: flex;
+  justify-content: center;
+}
+.logo-section h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+.logo-section h1 svg {
+  font-size: 40px;
+}
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  padding: 0 20px;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 30px;
+}
+.top-section a , .bottom-section a {
+  padding: 12px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  transition: all 0.3s ease;
+}
+.top-section svg ,.bottom-section svg {
+  font-size: 20px;
+}
+.top-section a.active, .bottom-section a.active {
+  background: linear-gradient(45deg, #cb4ad0,#fd8c8c); ;
+  padding: 12px;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 0 8px #433a65;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+.bottom-section .logout-button{
+    color: red !important;
+}

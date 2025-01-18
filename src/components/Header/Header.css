@@ -1,0 +1,110 @@
+.header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: calc(100% - 310px);
+    padding: 10px 40px 0 40px;
+    z-index: 2;
+    backdrop-filter: blur(20px);
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar input {
+    outline: none;
+    border: none;
+    padding: 10px 10px 10px 35px;
+    width: 300px;
+    border-radius: 10px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+.search-bar svg {
+    position: absolute;
+    left: 7px;
+    transform: translateY(6px);
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    color: #0e0e0e;
+    padding: 2px;
+    transition: all 0.3s ease;
+}
+
+
+.admin-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-section svg {
+    font-size: 28px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrow {
+    font-size: 18px !important;
+    transition: all 0.3s ease;
+}
+
+.arrow.rotated {
+    transform: rotate(180deg);
+}
+
+.admin-menu {
+    position: absolute;
+    right: 40px;
+    top: 70px;
+    background-color: #21212b;
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.admin-menu a {
+    display: block;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.admin-menu a:hover {
+    background-color: #f0f0f0;
+    color: #0e0e0e;
+}
+
+.admin-menu svg{
+    font-size: 18px;
+}
+
+.logout-button{
+    color: red ;
+    font-weight: 600;
+}
+
+.admin-menu .logout-button:hover {
+    background-color: transparent;
+    color: rgb(255, 59, 59);
+}

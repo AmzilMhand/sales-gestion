@@ -1,0 +1,99 @@
+.dashboard {
+
+    width: 100%;
+    height: 100%;
+}
+
+.monthly-reports {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+
+.sales-revenue-profit .sales,
+.sales-revenue-profit .revenue,
+.sales-revenue-profit .profit {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 100px;
+    width: calc(750px/3);
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
+    transition: transform 0.3s ease;
+}
+
+.sales-revenue-profit div svg {
+    font-size: 40px;
+    width: 40px;
+    background-color: #20bfa9;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.sales-revenue-profit .sales svg{
+    background-color:#ab6ede;
+}
+.sales-revenue-profit .revenue svg{
+    background-color:#6fc4bf;
+}
+.sales-revenue-profit .profit svg{
+    background-color:#f3769f;
+}
+.sales-revenue-profit {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.sales-revenue-profit .sales {
+    background: linear-gradient(40deg, #21212a 0%, #ab6ede 100%);
+}
+
+.sales-revenue-profit .revenue {
+    background: linear-gradient(40deg, #21212a 0%, #6fc4bf 100%);
+}
+
+.sales-revenue-profit .profit {
+    background: linear-gradient(40deg, #21212a 0%, #f3769f 100%);
+}
+
+.sales-revenue-profit .sales:hover,
+.sales-revenue-profit .revenue:hover,
+.sales-revenue-profit .profit:hover {
+    transform: scale(1.05);
+}
+
+.report-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.report-content span {
+    font-size: 16px;
+}
+.report-content h2 {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 30px;
+}
+
+
+
+
+
+.months-chart {
+    flex-grow: 1;
+    background-color: #212025;
+    border-radius: 20px;
+    padding: 10px 20px;
+    height: 300px;
+
+}
