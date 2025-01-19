@@ -3,10 +3,11 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Products from "./pages/Products/Products";
+import Products from "./pages/SalesForm/SalesForm";
 import Users from "./pages/Users/Users";
-import Settings from "./pages/Settings/Settings";
 import Login from "./pages/Login/Login";
+import SalesList from "./pages/SalesList/SalesList";
+import SalesForm from "./pages/SalesForm/SalesForm";
 
 function App() {
   return (
@@ -22,8 +23,9 @@ function App() {
           <Routes>
             <Route path="/Dashboard" element={<Dashboard />}></Route>
             <Route path="/Products" element={<Products />}></Route>
-            <Route path="/Users" element={<Users />}></Route>
-            <Route path="/Settings" element={<Settings />}></Route>
+            <Route path="/sellers" element={<Users />}></Route>
+            <Route path="/sales" element={<SalesList />}></Route>
+            <Route path="/sales-form" element={<SalesForm />}></Route>
             <Route path="/Login" element={<Login />}></Route>
           
           </Routes>

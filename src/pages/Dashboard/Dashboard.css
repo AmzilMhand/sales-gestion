@@ -1,99 +1,157 @@
 .dashboard {
+  width: 100%;
+  height: 100%;
 
-    width: 100%;
-    height: 100%;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.dashboard-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-select {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.export-button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #45a049;
 }
 
 .monthly-reports {
-    display: flex;
-    align-items: start;
-    justify-content: space-between;
-    width: 100%;
-    gap: 30px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
+.sales-revenue-profit {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
 
 .sales-revenue-profit .sales,
 .sales-revenue-profit .revenue,
 .sales-revenue-profit .profit {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    height: 100px;
-    width: calc(750px/3);
-    border-radius: 20px;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    flex: 1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); 
-    transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  height: 100px;
+  flex: 1;
+  border-radius: 20px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
 }
 
 .sales-revenue-profit div svg {
-    font-size: 40px;
-    width: 40px;
-    background-color: #20bfa9;
-    padding: 10px;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-.sales-revenue-profit .sales svg{
-    background-color:#ab6ede;
-}
-.sales-revenue-profit .revenue svg{
-    background-color:#6fc4bf;
-}
-.sales-revenue-profit .profit svg{
-    background-color:#f3769f;
-}
-.sales-revenue-profit {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 20px;
+  font-size: 40px;
+  width: 40px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 10px;
 }
 
 .sales-revenue-profit .sales {
-    background: linear-gradient(40deg, #21212a 0%, #ab6ede 100%);
+  background: linear-gradient(40deg, #21202c 0%, #ab6ede 100%);
 }
 
 .sales-revenue-profit .revenue {
-    background: linear-gradient(40deg, #21212a 0%, #6fc4bf 100%);
+  background: linear-gradient(40deg, #21202c 0%, #6fc4bf 100%);
 }
 
 .sales-revenue-profit .profit {
-    background: linear-gradient(40deg, #21212a 0%, #f3769f 100%);
+  background: linear-gradient(40deg, #21202c 0%, #f3769f 100%);
 }
 
 .sales-revenue-profit .sales:hover,
 .sales-revenue-profit .revenue:hover,
 .sales-revenue-profit .profit:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.sales-revenue-profit .sales svg {
+  background-color: #ab6ede;
+}
+
+.sales-revenue-profit .revenue svg {
+  background-color: #6fc4bf;
+}
+
+.sales-revenue-profit .profit svg {
+  background-color: #f3769f;
 }
 
 .report-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .report-content span {
-    font-size: 16px;
+  font-size: 16px;
 }
+
 .report-content h2 {
-    margin: 0;
-    margin-top: 5px;
-    font-size: 30px;
+  margin: 0;
+  margin-top: 5px;
+  font-size: 30px;
 }
 
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-
-
+.chart-wrapper {
+  flex: 1 1 calc(50% - 10px);
+  min-width: 300px;
+}
 
 .months-chart {
-    flex-grow: 1;
-    background-color: #212025;
-    border-radius: 20px;
-    padding: 10px 20px;
-    height: 300px;
-
+  background-color: #21202c;
+  border-radius: 20px;
+  padding: 20px;
+  height: 400px;
 }
+
+.months-chart h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .sales-revenue-profit {
+    flex-direction: column;
+  }
+
+  .chart-wrapper {
+    flex: 1 1 100%;
+  }
+}
+

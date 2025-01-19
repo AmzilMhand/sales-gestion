@@ -21,13 +21,17 @@ const Sidebar = () => {
             <IoGrid />
             Dashboard
           </NavLink>
-          <NavLink to={"/Products"}>
+          <NavLink to={"/sales"}>
             <AiFillProduct />
-            Products
+            Sales
           </NavLink>
-          <NavLink to={"/Users"}>
+          <NavLink to={"/sales-form"}>
+            <AiFillProduct />
+            Add Sales
+          </NavLink>
+          <NavLink to={"/Sellers"}>
             <FaUsers />
-            Users
+            Sellers
           </NavLink>
         </div>
         <div className="bottom-section">

@@ -1,0 +1,80 @@
+.sales-form-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sales-form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #6fc4bf;
+}
+
+.sales-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-group input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background-color: #2a2a2a;
+  color: white;
+  font-size: 16px;
+}
+
+.form-group input.error {
+  border-color: #f3769f;
+}
+
+.error-message {
+  color: #f3769f;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #6fc4bf;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #5ba8a4;
+}
+
+@media (max-width: 768px) {
+  .sales-form-container {
+    padding: 10px;
+  }
+
+  .form-group input {
+    font-size: 14px;
+  }
+}
+
