@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     height: 60px;
-    width: calc(100% - 310px);
+    width: calc(100% - 250px);
     padding: 10px 40px 0 40px;
     z-index: 2;
     backdrop-filter: blur(20px);
@@ -15,23 +15,25 @@
 }
 
 .search-bar input {
+    background-color:  rgba(255, 255, 255, 0.1);
+    color: #fff;
     outline: none;
     border: none;
     padding: 10px 10px 10px 35px;
     width: 300px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.5px;
 }
 
 .search-bar svg {
     position: absolute;
     left: 7px;
-    transform: translateY(6px);
+    transform: translateY(7px);
     background: transparent;
     border: none;
-    font-size: 18px;
-    color: #0e0e0e;
+    font-size: 20px;
+    color: #ffffff;
     padding: 2px;
     transition: all 0.3s ease;
 }
@@ -56,6 +58,7 @@
 .arrow {
     font-size: 18px !important;
     transition: all 0.3s ease;
+
 }
 
 .arrow.rotated {
@@ -70,7 +73,6 @@
 
     backdrop-filter: blur(20px);
 
-    border: 1px solid #ccc;
     padding: 10px;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -95,16 +97,7 @@
     color: #0e0e0e;
 }
 
-.admin-menu svg{
+.admin-menu svg {
     font-size: 18px;
 }
 
-.logout-button{
-    color: red ;
-    font-weight: 600;
-}
-
-.admin-menu .logout-button:hover {
-    background-color: transparent;
-    color: rgb(255, 59, 59);
-}

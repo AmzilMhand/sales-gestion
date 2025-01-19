@@ -124,10 +124,14 @@
 
 .charts-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 20px;
 }
-
+.test{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 .chart-wrapper {
   flex: 1 1 calc(50% - 10px);
   min-width: 300px;
@@ -137,21 +141,12 @@
   background-color: #21202c;
   border-radius: 20px;
   padding: 20px;
-  height: 400px;
+  flex: 1;
+
 }
 
 .months-chart h3 {
   color: white;
-  margin-bottom: 10px;
-}
-
-@media (max-width: 768px) {
-  .sales-revenue-profit {
-    flex-direction: column;
-  }
-
-  .chart-wrapper {
-    flex: 1 1 100%;
-  }
+  margin-bottom: 20px;
 }
 

@@ -1,0 +1,95 @@
+.users-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.add-user-btn {
+  padding: 10px 20px;
+  background: linear-gradient(40deg, #ab6ede 0%, #6fc4bf 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.add-user-btn:hover {
+  transform: translateY(-2px);
+}
+
+.users-table-container {
+  background-color: #21202c;
+  border-radius: 15px;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th,
+.users-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.users-table th {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+}
+
+.role-badge,
+.status-badge {
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.role-badge.admin {
+  background-color: rgba(171, 110, 222, 0.2);
+  color: #ab6ede;
+}
+
+.role-badge.employee {
+  background-color: rgba(111, 196, 191, 0.2);
+  color: #6fc4bf;
+}
+
+.status-badge.active {
+  background-color: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+}
+
+.status-badge.inactive {
+  background-color: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: rgba(111, 196, 191, 0.2);
+}
+
+.delete-btn:hover {
+  background-color: rgba(244, 67, 54, 0.2);
+}

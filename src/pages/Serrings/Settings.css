@@ -1,0 +1,94 @@
+.settings-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.settings-sidebar {
+  width: 250px;
+  background-color: #21202c;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.settings-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.settings-tab svg {
+  font-size: 20px;
+}
+
+.settings-tab:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.settings-tab.active {
+  background: linear-gradient(90deg, rgba(171, 110, 222, 0.2) 0%, rgba(171, 110, 222, 0) 100%);
+  color: #ab6ede;
+}
+
+.settings-content {
+  flex: 1;
+  background-color: #21202c;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.settings-section h2 {
+  margin-bottom: 30px;
+}
+
+.settings-form {
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: white;
+}
+
+.form-group input:disabled {
+  background-color: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+
+.save-btn {
+  padding: 10px 20px;
+  background: linear-gradient(40deg, #ab6ede 0%, #6fc4bf 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.save-btn:hover {
+  transform: translateY(-2px);
+}

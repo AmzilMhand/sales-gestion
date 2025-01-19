@@ -1,25 +1,25 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaSearch, FaUser } from "react-icons/fa";
-import { MdOutlineNotificationsNone } from "react-icons/md";
+import { MdLogout, MdOutlineNotificationsNone } from "react-icons/md";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaCircleUser } from "react-icons/fa6";
 import "./Header.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { logout } from "../../redux/authReducer";
+
 import { IoGrid, IoLogOut, IoSettingsSharp } from "react-icons/io5";
+import { useDispatch } from "react-redux";
 
 const Header = () => {
-  // State to manage the visibility of the admin menu
   const [menuVisible, setMenuVisible] = useState(false);
-
-  // Ref for the admin menu
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const menuRef = useRef(null);
 
-  // Toggle the admin menu visibility
   const toggleMenu = () => {
     setMenuVisible((prevState) => !prevState);
   };
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
@@ -33,6 +33,10 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
 
   return (
     <div className="header">
@@ -41,9 +45,6 @@ const Header = () => {
         <FaSearch />
       </div>
       <div className="admin-section">
-        <div className="notofication">
-          <MdOutlineNotificationsNone />
-        </div>
         <div className="profile" onClick={toggleMenu}>
           <FaCircleUser />
           <IoIosArrowDown className={`arrow ${menuVisible ? "rotated" : ""}`} />
@@ -56,18 +57,20 @@ const Header = () => {
             <IoGrid />
             Dashboard
           </NavLink>
-          <NavLink to={"/profile"}>
+          {/* <NavLink to={"/profile"}>
             <FaUser />
             Profile
-          </NavLink>
+          </NavLink> */}
           <NavLink to={"/settings"}>
             <IoSettingsSharp />
             Settings
           </NavLink>
-          <NavLink to={"/logout"} className={"logout-button"}>
-            <IoLogOut />
-            Log Out
-          </NavLink>
+          <button onClick={handleLogout} className="logout-button">
+            <div class="button-icon">
+              <MdLogout className="nav-icon" />
+            </div>
+            <p class="button-text">Log Out </p>
+          </button>
         </div>
       )}
     </div>
